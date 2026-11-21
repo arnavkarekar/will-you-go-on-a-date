@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Letter For You</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Special+Elite&family=Pinyon+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="atmosphere" aria-hidden="true"></div>
+    <div class="vignette" aria-hidden="true"></div>
+
+    <section id="scene" class="stage scene">
+      <p class="invite-hint" id="invite-hint">A letter awaits you</p>
+
+      <div class="envelope-wrap" id="envelope-wrap">
+        <div
+          id="envelope"
+          class="envelope"
+          role="button"
+          tabindex="0"
+          aria-label="Open the sealed letter"
+        >
+          <div class="env-back" aria-hidden="true"></div>
+
+          <!-- Clips the letter so it can't poke out the bottom/sides -->
+          <div class="letter-slot" id="letter-slot">
+            <article class="letter" id="letter" aria-hidden="true">
+              <div class="letter-texture" aria-hidden="true"></div>
+              <div class="letter-peek-lines" aria-hidden="true"></div>
+
+              <header class="letter-head">
+                <p class="letter-date">November 18, 2026</p>
+                <p class="letter-salutation">My dearest Sachi Patel,</p>
+              </header>
+
+              <div class="letter-body">
+                <p>
+                  I hope this letter finds thee lovely in the most pleasant
+                  circumstances.
+                </p>
+                <p>
+                  This letter is an inquiry on thy plans for Sunday,
+                  November 22nd. If thy schedule is available, I would like to
+                  tackle the treacherous trials of Popstroke.
+                </p>
+                <p>
+                  Following this journey I intend to feast at the esteemed
+                  Tanaka Ramen.
+                </p>
+                <p>
+                  To spend the day in the presence of one so beautiful as
+                  thyself would be my greatest joy.
+                </p>
+              </div>
+
+              <p class="letter-signoff">
+                Love,<br />
+                <span class="signature">Arnav Karekar</span>
+              </p>
+
+              <div class="invitation" id="invitation">
+                <p class="invitation-ask">
+                  Wilt thou accompany me on this most noble adventure?
+                </p>
+                <div class="button-row" id="button-row">
+                  <button type="button" class="btn btn-yes" id="yes-btn">
+                    Yes
+                  </button>
+                  <button type="button" class="btn btn-no" id="no-btn">No</button>
+                </div>
+                <div class="cover-sticker" id="cover-sticker" aria-hidden="true">
+                  <span>Nice try.</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="env-front" aria-hidden="true">
+            <div class="env-pocket-shade"></div>
+          </div>
+
+          <div class="env-flap" aria-hidden="true">
+            <div class="env-flap-inner"></div>
+          </div>
+
+          <span class="wax-seal" aria-hidden="true">
+            <svg class="seal-crest" viewBox="0 0 64 64" aria-hidden="true">
+              <circle
+                cx="32"
+                cy="32"
+                r="28"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                opacity="0.55"
+              />
+              <path
+                d="M32 46 V28 M32 28 C32 28 22 22 20 14 C26 16 30 22 32 28 C34 22 38 16 44 14 C42 22 32 28 32 28 Z"
+                fill="currentColor"
+                opacity="0.9"
+              />
+              <path
+                d="M24 46 Q32 40 40 46"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                opacity="0.7"
+              />
+            </svg>
+          </span>
+        </div>
+      </div>
+
+      <p class="tap-hint" id="tap-hint">Tap the seal to open</p>
+    </section>
+
+    <section id="yes-screen" class="yes-screen" hidden aria-live="polite">
+      <canvas id="confetti" class="confetti" aria-hidden="true"></canvas>
+      <div class="yes-burst" aria-hidden="true"></div>
+      <h1 class="yes-title">YAY!</h1>
+      <div class="yes-photo-wrap">
+        <img
+          class="yes-photo"
+          src="assets/us.jpg"
+          alt="Us together"
+          width="640"
+          height="800"
+        />
+        <span class="yes-heart" aria-hidden="true">♥</span>
+      </div>
+      <p class="yes-sub">
+        Popstroke, then dinner.<br />
+        I cannot wait.
+      </p>
+      <p class="yes-note">
+        Popstroke, then dinner at Tanaka Ramen.<br />
+        November 22nd, at 4:00pm.
+      </p>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
